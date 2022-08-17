@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { postAuth } from "../helpers/fetchApp";
+import Registro from "./Registro";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -56,13 +57,16 @@ const Login = () => {
               />
             </div>
             <div className="card-footer d-flex justify-content-evenly">
-              <button className="btn btn-success btn-lg" onClick={validarDatos}>
+              <button className="btn btn-outline-dark btn-lg" onClick={validarDatos}>
                 Iniciar Sesion
               </button>
-              <button className="btn btn-success btn-lg">
-                <i className="fa fa-google me-2" aria-hidden="true"></i>Google
+              
+              <button className="btn btn-outline-dark btn-lg" onClick={Registro}>
+                Registrarse
               </button>
             </div>
+            
+            
           </div>
           {message && (
             <div

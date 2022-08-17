@@ -10,6 +10,9 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.0",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.34",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0"

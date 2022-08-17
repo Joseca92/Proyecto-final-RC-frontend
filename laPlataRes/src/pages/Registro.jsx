@@ -41,55 +41,62 @@ const Registro = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row my-3">
-        <div className="col text-center">
-          <h3>
-            <i className="fa fa-user-circle-o" aria-hidden="true"></i> Registro
-            de usuario
-          </h3>
-        </div>
-      </div>
+    <div className="container mt-5">
       <div className="row">
-        <div className="col-12 col-md-6 offset-md-3">
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label>Nombre</label>
-              <input
-                type="text"
-                className="form-control mb-2"
-                name="nombre"
-                value={formValues.nombre}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Correo</label>
-              <input
+          <div className="card-header text-center">
+            <h2>
+              <i className="fa fa-user-circle-o fa-4x" aria-hidden="true"></i> Registro
+              de Usuario
+            </h2>
+          </div>
+            <div className="row">
+              <div className="col-12 col-md-6 offset-md-3">
+              <div className="card ">
+                <form onSubmit={handleSubmit}>
+                  <div className="form-group">
+                  <div className="card-body text-center">
+                  <label>Nombre y apellido</label>
+                  <input
+                  type="text"
+                  className="form-control mb-2"
+                  name="nombre"
+                  value={formValues.nombre}
+                  onChange={handleChange}
+                  required
+                  />
+                  </div>
+                </div>
+                <div className="form-group">
+                <div className="card-body text-center">
+                <label>Correo electrónico</label>
+                <input
                 type="email"
                 className="form-control mb-2"
                 name="email"
                 value={formValues.email}
                 onChange={handleChange}
                 required
-              />
-            </div>
-            <div className="form-group">
-              <label>Contraseña</label>
-              <input
+                />
+                  </div>
+                  </div>
+                <div className="form-group">
+                <div className="card-body text-center">
+                  <label>Contraseña</label>
+                  <input
                 type="password"
                 className="form-control mb-2"
                 name="password"
                 value={formValues.password}
                 onChange={handleChange}
                 required
-              />
-            </div>
-            <div className="d-grid">
-              <button className="btn btn-primary">Guardar</button>
-            </div>
-          </form>
+                />
+                </div></div>
+                <div className="d-grid">
+                <button className="btn btn-outline-dark btn-lg mt-5 ">Guardar</button>
+                </div>
+              </form>
+              </div>
+        </div>
           {message.length > 0 &&
             message.map((item, index) => (
               <div
