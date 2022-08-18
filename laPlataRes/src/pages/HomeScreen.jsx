@@ -6,44 +6,44 @@ import { getBlog } from "../helpers/fetchApp";
 import Post from "../components/Post";
 import BtnPaginacion from "../components/BtnPaginacion";
 
-const HomeScreen = () => {
-  const [posts, setPosts] = useState({
-    blogs: [],
-    total: 0,
-  });
+ const HomeScreen = () => {
+//   const [posts, setPosts] = useState({
+//     blogs: [],
+//     total: 0,
+//   });
 
-  const [registro, setRegistro] = useState(0);
+//   const [registro, setRegistro] = useState(0);
 
-  const [loading, setLoading] = useState(true);
-  const [mensaje, setMensaje] = useState("");
-  useEffect(() => {
-    getBlog(registro).then((respuesta) => {
-      console.log(respuesta);
-      if (respuesta?.msg) {
-        setMensaje(respuesta.msg);
-      } else {
-        setPosts({
-          blogs: respuesta.blogs,
-          total: respuesta.total,
-        });
-      }
-      setLoading(false);
-    });
-  }, [registro]);
+//   const [loading, setLoading] = useState(true);
+//   const [mensaje, setMensaje] = useState("");
+//   useEffect(() => {
+//     getBlog(registro).then((respuesta) => {
+//       console.log(respuesta);
+//       if (respuesta?.msg) {
+//         setMensaje(respuesta.msg);
+//       } else {
+//         setPosts({
+//           blogs: respuesta.blogs,
+//           total: respuesta.total,
+//         });
+//       }
+//       setLoading(false);
+//     });
+//   }, [registro]);
 
-  const nextPage = () => {
-    if (posts.total - registro > 5) {
-      console.log("OK");
-      setRegistro(registro + 5);
-    }
-  };
+//   const nextPage = () => {
+//     if (posts.total - registro > 5) {
+//       console.log("OK");
+//       setRegistro(registro + 5);
+//     }
+//   };
 
-  const prevPage = () => {
-    if (registro > 0) {
-      console.log("OK");
-      setRegistro(registro - 5);
-    }
-  };
+//   const prevPage = () => {
+//     if (registro > 0) {
+//       console.log("OK");
+//       setRegistro(registro - 5);
+//     }
+//   };
 
   return (
     <div className="container">
@@ -53,7 +53,7 @@ const HomeScreen = () => {
 
           <hr />
 
-          {loading ? (
+          {/* {loading ? (
             <div className="col-12 col-md-8 offset-md-2">
               <h3>Cragando...</h3>
             </div>
@@ -80,11 +80,11 @@ const HomeScreen = () => {
                 prevPage={prevPage}
               />
             </>
-          )}
+          )} */}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default HomeScreen;
